@@ -32,6 +32,7 @@ public class ItemController {
     @GetMapping("/api/v1/item/{id}")
     public Item getItem(@PathVariable("id") final Long id) throws ItemNotFoundException {
         Optional<Item> item = itemService.getItem(id);
+        // See here we makes changes for response entity like 200 status code always not custom
         if (item.isPresent()) {
             return item.get();
         } else {
