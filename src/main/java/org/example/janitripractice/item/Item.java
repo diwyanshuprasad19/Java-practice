@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 @Entity(name = "item")
 @Table(name = "item")
 public class Item {
+    // Id this will be our primary key
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
